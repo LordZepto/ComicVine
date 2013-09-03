@@ -188,8 +188,8 @@ class ComicVine
             'inc' => implode('+', $includes),
             'fmt' => 'json'
         );
-
-        $response = $this->call($entity,'GET', false);
+		$blank = array();
+        $response = $this->call($entity, $blank, 'GET', false);
 
         return $response;
     }
