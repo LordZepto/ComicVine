@@ -182,14 +182,14 @@ class ComicVine
 
         $this->validateInclude($includes, self::$validIncludes[$entity]);
 
-        $authRequired = $this->isAuthRequired($entity, $includes);
+        //$authRequired = $this->isAuthRequired($entity, $includes);
 
         $params = array(
             'inc' => implode('+', $includes),
             'fmt' => 'json'
         );
 
-        $response = $this->call($entity . '/' . $mbid, $params, 'GET', $authRequired);
+        $response = $this->call($entity,'GET', $authRequired);
 
         return $response;
     }
