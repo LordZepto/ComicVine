@@ -1,0 +1,32 @@
+{
+    "name": "lordzepto/comicvine",
+    "type": "library",
+    "description": "A PHP library for accessing the ComicVine API",
+    "keywords": ["comicvine", "library", "php", "api"],
+    "homepage": "https://github.com/lordzepto/comicvine",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomás Soler",
+            "email": "me@lordzepto.net",
+            "homepage": "http://blog.lordzepto.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.8"
+    },
+    "autoload": {
+        "psr-0": {
+            "ComicVine": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "require": {
+        "guzzle/guzzle": "~3.4"
+    }
+}
