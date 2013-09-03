@@ -3,7 +3,7 @@
     "type": "library",
     "description": "A PHP library for accessing the ComicVine API",
     "keywords": ["comicvine", "library", "php", "api"],
-    "homepage": "https://github.com/lordzepto/comicvine",
+    "homepage": "http://github.com/lordzepto/comicvine",
     "license": "MIT",
     "authors": [
         {
