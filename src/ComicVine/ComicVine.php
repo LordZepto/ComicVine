@@ -173,23 +173,23 @@ class ComicVine
      * @param  array  $inc
      * @return object | bool
      */
-    public function lookup($entity, $mbid, array $includes = array())
+    public function lookup($entity, array $includes = array())
     {
-
+		/*
         if (!$this->isValidEntity($entity)) {
             throw new Exception('Invalid entity');
         }
 
         $this->validateInclude($includes, self::$validIncludes[$entity]);
-
-        //$authRequired = $this->isAuthRequired($entity, $includes);
+		*/
+      
 
         $params = array(
             'inc' => implode('+', $includes),
             'fmt' => 'json'
         );
 
-        $response = $this->call($entity,'GET', $authRequired);
+        $response = $this->call($entity,'GET', false);
 
         return $response;
     }
