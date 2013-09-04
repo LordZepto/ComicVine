@@ -320,6 +320,7 @@ class ComicVine
         ));
 
         $request = $this->client->get($path . '?api_key=' . self::API_KEY . '&format=json');
+		echo $request->getUrl() . '\n';
 
         if ($isAuthRequred) {
             if ($this->user != null && $this->password != null) {
