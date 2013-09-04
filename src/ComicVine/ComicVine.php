@@ -332,9 +332,9 @@ class ComicVine
 
         $request->getQuery()->useUrlEncoding(false);
         $req = $request->send()->json();
-        echo '<pre>';
+        /*echo '<pre>';
 		print_r($req);
-		echo '</pre>';
+		echo '</pre>';*/
 		try {
             $this->isResponseOk($req['status_code']);
         } catch (Exception $e) {
