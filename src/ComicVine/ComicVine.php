@@ -336,7 +336,7 @@ class ComicVine
 		print_r($req);
 		echo '</pre>';
 		try {
-            $this->isResponseOk($req->status_code);
+            $this->isResponseOk($req['status_code']);
         } catch (Exception $e) {
             if (isset($e) || $e != '' || $e != 0) {
                 // log the error to somwhere!                
