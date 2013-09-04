@@ -185,8 +185,8 @@ class ComicVine
       
 
 
-		$blank = array();
-        $response = $this->call($entity, $blank, 'GET', false);
+
+        $response = $this->call($entity, $includes, 'GET', false);
 
         return $response;
     }
@@ -335,15 +335,12 @@ class ComicVine
         /*echo '<pre>';
 		print_r($req);
 		echo '</pre>';*/
-		try {
-            $this->isResponseOk($req['status_code']);
-        } catch (Exception $e) {
-            if (isset($e) || $e != '' || $e != 0) {
-                // log the error to somwhere!                
-                return $e;
-            } else {
-                return $req;
-            }
+			try {
+				$this->isResponseOk($req['status_code']);
+			} catch (Exception $e) {
+			
+			}
+		return $req;
         }
     }
 
