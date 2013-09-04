@@ -341,7 +341,7 @@ class ComicVine
 			
 			}
 		return $req;
-        }
+        
     }
 
     /**
