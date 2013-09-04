@@ -320,7 +320,7 @@ class ComicVine
         ));
 
         $request = $this->client->get($path . '/?api_key=' . self::API_KEY . '&format=json');
-		echo $request->getUrl() . '\n';
+		echo $request->getUrl() . "\n";
 
         if ($isAuthRequred) {
             if ($this->user != null && $this->password != null) {
@@ -332,7 +332,10 @@ class ComicVine
 
         $request->getQuery()->useUrlEncoding(false);
         $req = $request->send()->json();
-        try {
+        echo '<pre>';
+		print_r($req);
+		echo '</pre>';
+		try {
             $this->isResponseOk($req->status_code);
         } catch (Exception $e) {
             if (isset($e) || $e != '' || $e != 0) {
