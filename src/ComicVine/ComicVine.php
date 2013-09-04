@@ -184,10 +184,7 @@ class ComicVine
 		*/
       
 
-        $params = array(
-            'inc' => implode('+', $includes),
-            'fmt' => 'json'
-        );
+
 		$blank = array();
         $response = $this->call($entity, $blank, 'GET', false);
 
@@ -322,9 +319,7 @@ class ComicVine
             'data' => $params
         ));
 
-        $request = $this->client->get($path . '{?data*}' . '?api_key=' . self::API_KEY);
-        $request->setHeader('Accept', 'application/json');
-        $request->setHeader('User-Agent', $this->userAgent);
+        $request = $this->client->get($path . '?api_key=' . self::API_KEY . '&format=json');
 
         if ($isAuthRequred) {
             if ($this->user != null && $this->password != null) {
