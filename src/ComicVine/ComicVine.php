@@ -319,7 +319,7 @@ class ComicVine
             'data' => $params
         ));
 
-        $request = $this->client->get($path . '?api_key=' . self::API_KEY . '&format=json');
+        $request = $this->client->get($path . '/?api_key=' . self::API_KEY . '&format=json');
 		echo $request->getUrl() . '\n';
 
         if ($isAuthRequred) {
